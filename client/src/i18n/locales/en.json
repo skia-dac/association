@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "support": "Support Us",
+    "contact": "Contact",
+    "donate": "Donate Now"
+  },
+  "hero": {
+    "badge": "Making a Difference Together",
+    "title": "Empowering Communities Through",
+    "titleHighlight": "Compassion",
+    "subtitle": "Join us in our mission to create lasting change. Together, we can build a brighter future for those in need.",
+    "supportBtn": "Support Our Cause",
+    "projectsBtn": "View Our Projects",
+    "stats": {
+      "projects": "Projects Completed",
+      "lives": "Lives Impacted",
+      "volunteers": "Volunteers"
+    }
+  },
+  "home": {
+    "whyChoose": {
+      "title": "Why Choose Us",
+      "subtitle": "Our commitment to transparency, community engagement, and measurable impact sets us apart.",
+      "compassion": {
+        "title": "Compassionate Care",
+        "desc": "Providing essential support and resources to communities in need with empathy and dedication."
+      },
+      "community": {
+        "title": "Community Driven",
+        "desc": "Building strong partnerships with local communities to create sustainable and lasting impact."
+      },
+      "focused": {
+        "title": "Focused Mission",
+        "desc": "Clear goals and measurable outcomes ensure every contribution makes a real difference."
+      },
+      "transparent": {
+        "title": "Transparent Growth",
+        "desc": "Regular reports and updates keep our supporters informed about project progress and impact."
+      }
+    },
+    "recentProjects": {
+      "title": "Recent Projects",
+      "subtitle": "Explore our latest initiatives making a real difference in communities worldwide.",
+      "viewAll": "View All Projects",
+      "progress": "Progress"
+    },
+    "cta": {
+      "title": "Ready to Make a Difference?",
+      "subtitle": "Your support can transform lives. Join our community of changemakers today.",
+      "donate": "Donate Now",
+      "contact": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About CharityHope",
+    "subtitle": "We are a non-profit organization dedicated to creating positive change through sustainable community development, education, and healthcare initiatives. Our mission is to empower individuals and communities to build better futures.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide sustainable solutions that empower communities through education, healthcare access, and economic development. We believe in creating lasting change by working alongside the people we serve, ensuring that every initiative is community-led and culturally appropriate."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "A world where every individual has access to basic necessities, quality education, and healthcare. We envision thriving communities where people can reach their full potential and contribute positively to society, breaking the cycle of poverty for future generations."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "These principles guide everything we do and shape our organizational culture.",
+      "integrity": {
+        "title": "Integrity",
+        "desc": "We maintain the highest standards of honesty and transparency in all our operations."
+      },
+      "impact": {
+        "title": "Impact",
+        "desc": "Every action we take is measured by its positive effect on the communities we serve."
+      },
+      "vision": {
+        "title": "Vision",
+        "desc": "We look beyond immediate needs to create sustainable, long-term solutions."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "We strive for excellence in program delivery and stakeholder relationships."
+      }
+    },
+    "journey": {
+      "title": "Our Journey",
+      "subtitle": "Key milestones that have shaped our organization over the years."
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Passionate professionals dedicated to making a difference in the world."
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Explore the initiatives we're working on to create lasting positive change in communities around the world.",
+    "filters": {
+      "all": "All",
+      "education": "Education",
+      "healthcare": "Healthcare",
+      "infrastructure": "Infrastructure",
+      "environment": "Environment"
+    },
+    "status": {
+      "ongoing": "Ongoing",
+      "completed": "Completed"
+    },
+    "location": "Location",
+    "budget": "Budget",
+    "beneficiaries": "Beneficiaries",
+    "progress": "Progress",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Want to Support a Project?",
+      "subtitle": "Your contribution can help us expand our reach and create even more impact.",
+      "donate": "Make a Donation"
+    }
+  },
+  "support": {
+    "title": "Support Our Mission",
+    "subtitle": "Your generosity enables us to continue making a meaningful difference in the lives of those who need it most.",
+    "taxDeductible": "Tax-deductible donations",
+    "stats": {
+      "donations": "Total Donations Received",
+      "programs": "Goes Directly to Programs",
+      "donors": "Active Monthly Donors",
+      "rating": "Charity Rating"
+    },
+    "donate": {
+      "title": "Make a Donation",
+      "subtitle": "Every contribution, no matter the size, makes a real difference.",
+      "custom": "Or Enter Custom Amount",
+      "donateBtn": "Donate Now"
+    },
+    "payment": {
+      "title": "Payment Methods",
+      "subtitle": "We accept various payment options for your convenience.",
+      "credit": "Credit/Debit Card",
+      "bank": "Bank Transfer",
+      "mobile": "Mobile Money",
+      "recurring": "Recurring Donation"
+    },
+    "volunteer": {
+      "title": "Volunteer With Us",
+      "subtitle": "Can't donate? Your time and skills are just as valuable. Join our team of dedicated volunteers.",
+      "apply": "Apply to Volunteer",
+      "commitment": "Commitment"
+    },
+    "corporate": {
+      "title": "Corporate Partnerships",
+      "subtitle": "Partner with us to create meaningful CSR programs and make a lasting impact while engaging your team.",
+      "partner": "Become a Partner",
+      "view": "View Impact Projects"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or want to get involved? We'd love to hear from you. Reach out and let's make a difference together.",
+    "info": {
+      "visit": "Visit Us",
+      "call": "Call Us",
+      "email": "Email Us",
+      "hours": "Office Hours",
+      "reply": "We reply within 24h"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number (Optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Something went wrong. Please try again.",
+      "required": "*",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phonePlaceholder": "+1 (234) 567-890",
+      "subjectPlaceholder": "How can we help?",
+      "messagePlaceholder": "Tell us more about your inquiry..."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions"
+    }
+  },
+  "footer": {
+    "tagline": "Making a positive impact in our community through charitable actions and sustainable development.",
+    "quickLinks": "Quick Links",
+    "getInvolved": "Get Involved",
+    "contactInfo": "Contact Info",
+    "volunteer": "Volunteer",
+    "donate": "Donate",
+    "partner": "Partner With Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "readMore": "Read More",
+    "close": "Close"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "support": "Nous soutenir",
+    "contact": "Contact",
+    "donate": "Faire un don"
+  },
+  "hero": {
+    "badge": "Ensemble, Faisons la Différence",
+    "title": "Autonomiser les Communautés par la",
+    "titleHighlight": "Compassion",
+    "subtitle": "Rejoignez-nous dans notre mission de créer un changement durable. Ensemble, nous pouvons construire un avenir meilleur pour ceux qui en ont besoin.",
+    "supportBtn": "Soutenir notre cause",
+    "projectsBtn": "Voir nos projets",
+    "stats": {
+      "projects": "Projets réalisés",
+      "lives": "Vies impactées",
+      "volunteers": "Bénévoles"
+    }
+  },
+  "home": {
+    "whyChoose": {
+      "title": "Pourquoi nous choisir",
+      "subtitle": "Notre engagement envers la transparence, l'engagement communautaire et l'impact mesurable nous distingue.",
+      "compassion": {
+        "title": "Soins compassionnels",
+        "desc": "Fournir un soutien essentiel et des ressources aux communautés dans le besoin avec empathie et dévouement."
+      },
+      "community": {
+        "title": "Axé sur la communauté",
+        "desc": "Construire des partenariats solides avec les communautés locales pour créer un impact durable et durable."
+      },
+      "focused": {
+        "title": "Mission ciblée",
+        "desc": "Des objectifs clairs et des résultats mesurables garantissent que chaque contribution fait une réelle différence."
+      },
+      "transparent": {
+        "title": "Croissance transparente",
+        "desc": "Des rapports et mises à jour réguliers tiennent nos supporters informés des progrès et de l'impact des projets."
+      }
+    },
+    "recentProjects": {
+      "title": "Projets récents",
+      "subtitle": "Explorez nos dernières initiatives qui font une réelle différence dans les communautés du monde entier.",
+      "viewAll": "Voir tous les projets",
+      "progress": "Progrès"
+    },
+    "cta": {
+      "title": "Prêt à faire la différence?",
+      "subtitle": "Votre soutien peut transformer des vies. Rejoignez notre communauté de changement dès aujourd'hui.",
+      "donate": "Faire un don",
+      "contact": "Nous contacter"
+    }
+  },
+  "about": {
+    "title": "À propos de CharityHope",
+    "subtitle": "Nous sommes une organisation à but non lucratif dédiée à la création de changements positifs par le développement communautaire durable, l'éducation et les initiatives de santé. Notre mission est d'autonomiser les individus et les communautés pour construire de meilleurs avenirs.",
+    "mission": {
+      "title": "Notre mission",
+      "text": "Fournir des solutions durables qui autonomisent les communautés par l'éducation, l'accès aux soins de santé et le développement économique. Nous croyons en la création d'un changement durable en travaillant aux côtés des personnes que nous servons, en veillant à ce que chaque initiative soit dirigée par la communauté et culturellement appropriée."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "text": "Un monde où chaque individu a accès aux nécessités de base, à une éducation de qualité et aux soins de santé. Nous envisageons des communautés prospères où les gens peuvent atteindre leur plein potentiel et contribuer positivement à la société, brisant le cycle de la pauvreté pour les générations futures."
+    },
+    "values": {
+      "title": "Nos valeurs fondamentales",
+      "subtitle": "Ces principes guident tout ce que nous faisons et façonnent notre culture organisationnelle.",
+      "integrity": {
+        "title": "Intégrité",
+        "desc": "Nous maintenons les normes les plus élevées d'honnêteté et de transparence dans toutes nos opérations."
+      },
+      "impact": {
+        "title": "Impact",
+        "desc": "Chaque action que nous entreprenons est mesurée par son effet positif sur les communautés que nous servons."
+      },
+      "vision": {
+        "title": "Vision",
+        "desc": "Nous regardons au-delà des besoins immédiats pour créer des solutions durables à long terme."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Nous nous efforçons d'atteindre l'excellence dans la prestation de programmes et les relations avec les parties prenantes."
+      }
+    },
+    "journey": {
+      "title": "Notre parcours",
+      "subtitle": "Les étapes clés qui ont façonné notre organisation au fil des ans."
+    },
+    "team": {
+      "title": "Rencontrez notre équipe",
+      "subtitle": "Des professionnels passionnés dédiés à faire une différence dans le monde."
+    }
+  },
+  "projects": {
+    "title": "Nos projets",
+    "subtitle": "Explorez les initiatives sur lesquelles nous travaillons pour créer un changement positif durable dans les communautés du monde entier.",
+    "filters": {
+      "all": "Tous",
+      "education": "Éducation",
+      "healthcare": "Santé",
+      "infrastructure": "Infrastructure",
+      "environment": "Environnement"
+    },
+    "status": {
+      "ongoing": "En cours",
+      "completed": "Terminé"
+    },
+    "location": "Lieu",
+    "budget": "Budget",
+    "beneficiaries": "Bénéficiaires",
+    "progress": "Progrès",
+    "learnMore": "En savoir plus",
+    "cta": {
+      "title": "Vous souhaitez soutenir un projet?",
+      "subtitle": "Votre contribution peut nous aider à étendre notre portée et à créer encore plus d'impact.",
+      "donate": "Faire un don"
+    }
+  },
+  "support": {
+    "title": "Soutenez notre mission",
+    "subtitle": "Votre générosité nous permet de continuer à faire une différence significative dans la vie de ceux qui en ont le plus besoin.",
+    "taxDeductible": "Dons déductibles d'impôts",
+    "stats": {
+      "donations": "Total des dons reçus",
+      "programs": "Va directement aux programmes",
+      "donors": "Donateurs mensuels actifs",
+      "rating": "Note de charité"
+    },
+    "donate": {
+      "title": "Faire un don",
+      "subtitle": "Chaque contribution, quelle que soit sa taille, fait une réelle différence.",
+      "custom": "Ou entrez un montant personnalisé",
+      "donateBtn": "Faire un don"
+    },
+    "payment": {
+      "title": "Méthodes de paiement",
+      "subtitle": "Nous acceptons diverses options de paiement pour votre commodité.",
+      "credit": "Carte de crédit/débit",
+      "bank": "Virement bancaire",
+      "mobile": "Argent mobile",
+      "recurring": "Don récurrent"
+    },
+    "volunteer": {
+      "title": "Devenez bénévole",
+      "subtitle": "Vous ne pouvez pas donner? Votre temps et vos compétences sont tout aussi précieux. Rejoignez notre équipe de bénévoles dévoués.",
+      "apply": "Postuler comme bénévole",
+      "commitment": "Engagement"
+    },
+    "corporate": {
+      "title": "Partenariats d'entreprise",
+      "subtitle": "Associez-vous à nous pour créer des programmes RSE significatifs et avoir un impact durable tout en engageant votre équipe.",
+      "partner": "Devenir partenaire",
+      "view": "Voir les projets d'impact"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez des questions ou souhaitez vous impliquer? Nous serions ravis de vous entendre. Contactez-nous et faisons la différence ensemble.",
+    "info": {
+      "visit": "Visitez-nous",
+      "call": "Appelez-nous",
+      "email": "Envoyez-nous un email",
+      "hours": "Heures d'ouverture",
+      "reply": "Nous répondons dans les 24h"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone (Facultatif)",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "success": "Merci! Votre message a été envoyé avec succès.",
+      "error": "Quelque chose s'est mal passé. Veuillez réessayer.",
+      "required": "*",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@exemple.com",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider?",
+      "messagePlaceholder": "Parlez-nous de votre demande..."
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "subtitle": "Réponses rapides aux questions courantes"
+    }
+  },
+  "footer": {
+    "tagline": "Avoir un impact positif dans notre communauté grâce à des actions caritatives et un développement durable.",
+    "quickLinks": "Liens rapides",
+    "getInvolved": "S'impliquer",
+    "contactInfo": "Informations de contact",
+    "volunteer": "Bénévolat",
+    "donate": "Faire un don",
+    "partner": "Partenariat",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique des cookies",
+    "rights": "Tous droits réservés"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "readMore": "Lire la suite",
+    "close": "Fermer"
+  }
+}
