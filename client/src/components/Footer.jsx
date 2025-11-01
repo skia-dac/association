@@ -85,7 +85,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white dark:text-gray-100 font-semibold text-lg mb-4">{t('footer.contactInfo')}</h3>
+ 
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
