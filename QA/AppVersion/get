@@ -1,0 +1,46 @@
+# Test Cases for GET /api/v1/appVersion - Get Latest App Version
+
+## Happy Path Test Cases
+- HP_AppVersionGet-V1_API successfully retrieves latest app version with valid authentication
+- HP_AppVersionGet-V1_API returns correct version structure and metadata
+- HP_AppVersionGet-V1_API returns consistent version format
+
+## Validation Test Cases
+- VC_AppVersionGet-V1_API returns 401 when authentication token is missing
+- VC_AppVersionGet-V1_API returns 401 when authentication token is invalid
+- VC_AppVersionGet-V1_API returns 401 when authentication token is expired
+- VC_AppVersionGet-V1_API returns 403 when user lacks permission to view app version
+- VC_AppVersionGet-V1_API handles malformed request headers gracefully
+- VC_AppVersionGet-V1_API validates Content-Type header requirements
+- VC_AppVersionGet-V1_API handles invalid Accept header values
+- VC_AppVersionGet-V1_API validates request method restrictions
+
+## Edge Test Cases
+- EC_AppVersionGet-V1_API handles concurrent access to version information
+- EC_AppVersionGet-V1_API handles version retrieval during system updates
+- EC_AppVersionGet-V1_API handles version information with special characters
+- EC_AppVersionGet-V1_API handles version retrieval when no version is available
+- EC_AppVersionGet-V1_API handles maximum length version strings
+- EC_AppVersionGet-V1_API handles version information with unicode characters
+- EC_AppVersionGet-V1_API handles system with multiple version formats
+
+## Performance Test Cases
+- PC_AppVersionGet-V1_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_AppVersionGet-V1_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_AppVersionGet-V1_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_AppVersionGet-V1_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_AppVersionGet-V1_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_AppVersionGet-V1_API prevents unauthorized access without authentication
+- SC_AppVersionGet-V1_API does not expose sensitive information in error messages
+- SC_AppVersionGet-V1_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_AppVersionGet-V1_API prevents API abuse through rate limiting
+- SC_AppVersionGet-V1_API prevents SQL injection through query parameters
+- SC_AppVersionGet-V1_API properly sanitizes response data to prevent XSS attacks
+- SC_AppVersionGet-V1_API prevents excessive data exposure in response payload
+- SC_AppVersionGet-V1_API validates HTTPS enforcement for secure data transmission
+- SC_AppVersionGet-V1_API prevents information disclosure through error responses
+- SC_AppVersionGet-V1_API ensures proper CORS configuration
+- SC_AppVersionGet-V1_API prevents version information tampering
+- SC_AppVersionGet-V1_API validates version data integrity

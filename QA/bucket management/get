@@ -1,0 +1,42 @@
+# Test Cases for GET /api/v1/bucket - Get All Buckets
+
+## Happy Path Test Cases
+- HP_BucketGet-V1_API successfully retrieves all buckets with valid authentication
+- HP_BucketGet-V1_API returns empty list when no buckets exist
+- HP_BucketGet-V1_API returns correct bucket structure and metadata
+
+## Validation Test Cases
+- VC_BucketGet-V1_API returns 401 when authentication token is missing
+- VC_BucketGet-V1_API returns 401 when authentication token is invalid
+- VC_BucketGet-V1_API returns 401 when authentication token is expired
+- VC_BucketGet-V1_API returns 403 when user lacks permission to view buckets
+- VC_BucketGet-V1_API handles malformed request headers gracefully
+- VC_BucketGet-V1_API validates Content-Type header requirements
+- VC_BucketGet-V1_API handles invalid Accept header values
+
+## Edge Test Cases
+- EC_BucketGet-V1_API handles maximum number of buckets in system
+- EC_BucketGet-V1_API handles buckets with maximum allowed name length
+- EC_BucketGet-V1_API handles buckets with special characters in names
+- EC_BucketGet-V1_API handles concurrent access to bucket list
+- EC_BucketGet-V1_API handles system with zero buckets
+- EC_BucketGet-V1_API handles buckets with unicode characters in metadata
+
+## Performance Test Cases
+- PC_BucketGet-V1_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_BucketGet-V1_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_BucketGet-V1_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_BucketGet-V1_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_BucketGet-V1_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_BucketGet-V1_API prevents unauthorized access without authentication
+- SC_BucketGet-V1_API does not expose sensitive information in error messages
+- SC_BucketGet-V1_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_BucketGet-V1_API prevents API abuse through rate limiting
+- SC_BucketGet-V1_API prevents SQL injection through query parameters
+- SC_BucketGet-V1_API properly sanitizes response data to prevent XSS attacks
+- SC_BucketGet-V1_API prevents excessive data exposure in response payload
+- SC_BucketGet-V1_API validates HTTPS enforcement for secure data transmission
+- SC_BucketGet-V1_API prevents information disclosure through error responses
+- SC_BucketGet-V1_API ensures proper CORS configuration

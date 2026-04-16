@@ -1,0 +1,53 @@
+# Test Cases for POST /api/v1/bucket - Create a New Bucket
+
+## Happy Path Test Cases
+- HP_BucketPost-V1_API successfully creates bucket with valid data and authentication
+- HP_BucketPost-V1_API returns correct bucket structure after creation
+- HP_BucketPost-V1_API creates bucket with minimum required fields
+
+## Validation Test Cases
+- VC_BucketPost-V1_API returns 401 when authentication token is missing
+- VC_BucketPost-V1_API returns 401 when authentication token is invalid
+- VC_BucketPost-V1_API returns 401 when authentication token is expired
+- VC_BucketPost-V1_API returns 403 when user lacks permission to create buckets
+- VC_BucketPost-V1_API returns 400 when bucket name is missing
+- VC_BucketPost-V1_API returns 400 when bucket name is empty
+- VC_BucketPost-V1_API returns 400 when bucket name is null
+- VC_BucketPost-V1_API returns 400 when bucket name contains invalid characters
+- VC_BucketPost-V1_API returns 409 when bucket name already exists
+- VC_BucketPost-V1_API returns 400 when request body is malformed JSON
+- VC_BucketPost-V1_API returns 400 when Content-Type header is missing
+- VC_BucketPost-V1_API returns 400 when Content-Type is not application/json
+- VC_BucketPost-V1_API returns 400 when required fields are missing from request body
+
+## Edge Test Cases
+- EC_BucketPost-V1_API handles bucket name at maximum allowed length
+- EC_BucketPost-V1_API returns 400 when bucket name exceeds maximum length
+- EC_BucketPost-V1_API handles bucket name with special characters at boundaries
+- EC_BucketPost-V1_API handles concurrent bucket creation requests
+- EC_BucketPost-V1_API handles bucket creation when system is at maximum capacity
+- EC_BucketPost-V1_API handles bucket name with unicode characters
+- EC_BucketPost-V1_API handles very large request payload
+- EC_BucketPost-V1_API handles bucket name with minimum allowed length
+
+## Performance Test Cases
+- PC_BucketPost-V1_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_BucketPost-V1_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_BucketPost-V1_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_BucketPost-V1_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_BucketPost-V1_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_BucketPost-V1_API prevents unauthorized access without authentication
+- SC_BucketPost-V1_API does not expose sensitive information in error messages
+- SC_BucketPost-V1_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_BucketPost-V1_API prevents API abuse through rate limiting
+- SC_BucketPost-V1_API prevents SQL injection through bucket name parameter
+- SC_BucketPost-V1_API properly sanitizes input fields to prevent XSS attacks
+- SC_BucketPost-V1_API prevents excessive data exposure in response payload
+- SC_BucketPost-V1_API validates HTTPS enforcement for secure data transmission
+- SC_BucketPost-V1_API prevents information disclosure through error responses
+- SC_BucketPost-V1_API ensures proper CORS configuration
+- SC_BucketPost-V1_API prevents NoSQL injection through request parameters
+- SC_BucketPost-V1_API validates input sanitization for all request fields
+- SC_BucketPost-V1_API prevents directory traversal attacks through bucket names

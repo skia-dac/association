@@ -1,0 +1,57 @@
+# Test Cases for DELETE /api/v2/file/{value} - Delete a File (V2 - UUID Support)
+
+## Happy Path Test Cases
+- HP_FileDelete-V2_API successfully deletes existing file with valid UUID and authentication
+- HP_FileDelete-V2_API returns correct response after successful deletion
+- HP_FileDelete-V2_API confirms file is removed from system after deletion
+- HP_FileDelete-V2_API handles deletion with valid UUID format
+
+## Validation Test Cases
+- VC_FileDelete-V2_API returns 401 when authentication token is missing
+- VC_FileDelete-V2_API returns 401 when authentication token is invalid
+- VC_FileDelete-V2_API returns 401 when authentication token is expired
+- VC_FileDelete-V2_API returns 403 when user lacks permission to delete files
+- VC_FileDelete-V2_API returns 404 when file UUID does not exist
+- VC_FileDelete-V2_API returns 400 when UUID parameter is missing
+- VC_FileDelete-V2_API returns 400 when UUID parameter is empty
+- VC_FileDelete-V2_API returns 400 when UUID format is invalid
+- VC_FileDelete-V2_API returns 400 when UUID parameter is null
+- VC_FileDelete-V2_API returns 403 when user tries to delete file owned by another user
+- VC_FileDelete-V2_API handles malformed request headers gracefully
+- VC_FileDelete-V2_API validates Accept header requirements
+- VC_FileDelete-V2_API returns 400 when UUID contains invalid characters
+
+## Edge Test Cases
+- EC_FileDelete-V2_API handles UUID at exact format boundaries
+- EC_FileDelete-V2_API handles concurrent file deletion requests for same UUID
+- EC_FileDelete-V2_API handles deletion of files with unicode characters in metadata
+- EC_FileDelete-V2_API handles repeated deletion attempts of same file UUID
+- EC_FileDelete-V2_API handles deletion during high system load
+- EC_FileDelete-V2_API handles deletion of maximum size files
+- EC_FileDelete-V2_API handles deletion when file is being accessed by other processes
+- EC_FileDelete-V2_API handles deletion of files with special metadata
+- EC_FileDelete-V2_API handles corrupted UUID references
+
+## Performance Test Cases
+- PC_FileDelete-V2_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_FileDelete-V2_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_FileDelete-V2_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_FileDelete-V2_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_FileDelete-V2_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_FileDelete-V2_API prevents unauthorized access without authentication
+- SC_FileDelete-V2_API does not expose sensitive information in error messages
+- SC_FileDelete-V2_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_FileDelete-V2_API prevents API abuse through rate limiting
+- SC_FileDelete-V2_API prevents SQL injection through UUID parameter
+- SC_FileDelete-V2_API properly sanitizes input fields to prevent XSS attacks
+- SC_FileDelete-V2_API prevents excessive data exposure in response payload
+- SC_FileDelete-V2_API validates HTTPS enforcement for secure data transmission
+- SC_FileDelete-V2_API prevents information disclosure through error responses
+- SC_FileDelete-V2_API ensures proper CORS configuration
+- SC_FileDelete-V2_API prevents NoSQL injection through UUID parameter
+- SC_FileDelete-V2_API validates UUID format to prevent enumeration attacks
+- SC_FileDelete-V2_API prevents unauthorized deletion of system files
+- SC_FileDelete-V2_API prevents cross-user file deletion through UUID manipulation
+- SC_FileDelete-V2_API ensures secure UUID validation and sanitization

@@ -1,0 +1,59 @@
+# Test Cases for POST /api/v2/file - Create a New File (V2 - Returns UUID)
+
+## Happy Path Test Cases
+- HP_FilePost-V2_API successfully creates file with valid data and authentication
+- HP_FilePost-V2_API returns correct file structure with UUID after creation
+- HP_FilePost-V2_API creates file with minimum required fields
+- HP_FilePost-V2_API generates valid UUID format in response
+
+## Validation Test Cases
+- VC_FilePost-V2_API returns 401 when authentication token is missing
+- VC_FilePost-V2_API returns 401 when authentication token is invalid
+- VC_FilePost-V2_API returns 401 when authentication token is expired
+- VC_FilePost-V2_API returns 403 when user lacks permission to create files
+- VC_FilePost-V2_API returns 400 when file name is missing
+- VC_FilePost-V2_API returns 400 when file name is empty
+- VC_FilePost-V2_API returns 400 when file name is null
+- VC_FilePost-V2_API returns 400 when file name contains invalid characters
+- VC_FilePost-V2_API returns 400 when file content is missing
+- VC_FilePost-V2_API returns 400 when request body is malformed JSON
+- VC_FilePost-V2_API returns 400 when Content-Type header is missing
+- VC_FilePost-V2_API returns 400 when Content-Type is not multipart/form-data
+- VC_FilePost-V2_API returns 400 when required fields are missing from request body
+- VC_FilePost-V2_API returns 413 when file size exceeds maximum allowed limit
+
+## Edge Test Cases
+- EC_FilePost-V2_API handles file name at maximum allowed length
+- EC_FilePost-V2_API returns 400 when file name exceeds maximum length
+- EC_FilePost-V2_API handles file name with special characters at boundaries
+- EC_FilePost-V2_API handles concurrent file creation requests
+- EC_FilePost-V2_API handles file creation when storage is at maximum capacity
+- EC_FilePost-V2_API handles file name with unicode characters
+- EC_FilePost-V2_API handles very large file uploads
+- EC_FilePost-V2_API handles file name with minimum allowed length
+- EC_FilePost-V2_API handles zero byte file uploads
+- EC_FilePost-V2_API handles files with identical names but different content
+
+## Performance Test Cases
+- PC_FilePost-V2_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_FilePost-V2_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_FilePost-V2_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_FilePost-V2_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_FilePost-V2_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_FilePost-V2_API prevents unauthorized access without authentication
+- SC_FilePost-V2_API does not expose sensitive information in error messages
+- SC_FilePost-V2_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_FilePost-V2_API prevents API abuse through rate limiting
+- SC_FilePost-V2_API prevents SQL injection through file name parameter
+- SC_FilePost-V2_API properly sanitizes input fields to prevent XSS attacks
+- SC_FilePost-V2_API prevents excessive data exposure in response payload
+- SC_FilePost-V2_API validates HTTPS enforcement for secure data transmission
+- SC_FilePost-V2_API prevents information disclosure through error responses
+- SC_FilePost-V2_API ensures proper CORS configuration
+- SC_FilePost-V2_API prevents NoSQL injection through request parameters
+- SC_FilePost-V2_API validates input sanitization for all request fields
+- SC_FilePost-V2_API prevents directory traversal attacks through file names
+- SC_FilePost-V2_API prevents malicious file uploads and validates file types
+- SC_FilePost-V2_API ensures UUID generation is cryptographically secure

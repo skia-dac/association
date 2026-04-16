@@ -1,0 +1,51 @@
+# Test Cases for GET /api/v2/file - Get All Files (V2 - UUID Support)
+
+## Happy Path Test Cases
+- HP_FileGet-V2_API successfully retrieves all files with valid authentication
+- HP_FileGet-V2_API returns empty list when no files exist
+- HP_FileGet-V2_API returns correct file structure with UUID and metadata
+- HP_FileGet-V2_API returns files with proper UUID format
+
+## Validation Test Cases
+- VC_FileGet-V2_API returns 401 when authentication token is missing
+- VC_FileGet-V2_API returns 401 when authentication token is invalid
+- VC_FileGet-V2_API returns 401 when authentication token is expired
+- VC_FileGet-V2_API returns 403 when user lacks permission to view files
+- VC_FileGet-V2_API handles malformed request headers gracefully
+- VC_FileGet-V2_API validates Content-Type header requirements
+- VC_FileGet-V2_API handles invalid Accept header values
+- VC_FileGet-V2_API validates query parameter format
+- VC_FileGet-V2_API handles invalid pagination parameters
+
+## Edge Test Cases
+- EC_FileGet-V2_API handles maximum number of files in system
+- EC_FileGet-V2_API handles files with maximum allowed name length
+- EC_FileGet-V2_API handles files with special characters in names
+- EC_FileGet-V2_API handles concurrent access to file list
+- EC_FileGet-V2_API handles system with zero files
+- EC_FileGet-V2_API handles files with unicode characters in metadata
+- EC_FileGet-V2_API handles files with maximum file size
+- EC_FileGet-V2_API handles pagination at boundary values
+- EC_FileGet-V2_API handles files with corrupted UUID references
+
+## Performance Test Cases
+- PC_FileGet-V2_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_FileGet-V2_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_FileGet-V2_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_FileGet-V2_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_FileGet-V2_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_FileGet-V2_API prevents unauthorized access without authentication
+- SC_FileGet-V2_API does not expose sensitive information in error messages
+- SC_FileGet-V2_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_FileGet-V2_API prevents API abuse through rate limiting
+- SC_FileGet-V2_API prevents SQL injection through query parameters
+- SC_FileGet-V2_API properly sanitizes response data to prevent XSS attacks
+- SC_FileGet-V2_API prevents excessive data exposure in response payload
+- SC_FileGet-V2_API validates HTTPS enforcement for secure data transmission
+- SC_FileGet-V2_API prevents information disclosure through error responses
+- SC_FileGet-V2_API ensures proper CORS configuration
+- SC_FileGet-V2_API prevents unauthorized access to files from other users
+- SC_FileGet-V2_API validates UUID format to prevent enumeration attacks
+- SC_FileGet-V2_API prevents directory traversal through file parameters

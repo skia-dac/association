@@ -1,0 +1,59 @@
+# Test Cases for GET /api/v2/file/file-info - Get a Specific File (V2 - UUID Support)
+
+## Happy Path Test Cases
+- HP_FileInfo-V2_API successfully retrieves file info with valid UUID and authentication
+- HP_FileInfo-V2_API returns correct file structure with UUID and metadata
+- HP_FileInfo-V2_API returns complete file information for existing file
+- HP_FileInfo-V2_API handles file info retrieval with proper UUID format
+
+## Validation Test Cases
+- VC_FileInfo-V2_API returns 401 when authentication token is missing
+- VC_FileInfo-V2_API returns 401 when authentication token is invalid
+- VC_FileInfo-V2_API returns 401 when authentication token is expired
+- VC_FileInfo-V2_API returns 403 when user lacks permission to view file info
+- VC_FileInfo-V2_API returns 404 when file UUID does not exist
+- VC_FileInfo-V2_API returns 400 when UUID parameter is missing
+- VC_FileInfo-V2_API returns 400 when UUID parameter is empty
+- VC_FileInfo-V2_API returns 400 when UUID format is invalid
+- VC_FileInfo-V2_API returns 400 when UUID parameter is null
+- VC_FileInfo-V2_API returns 403 when user tries to access file info owned by another user
+- VC_FileInfo-V2_API handles malformed request headers gracefully
+- VC_FileInfo-V2_API validates Accept header requirements
+- VC_FileInfo-V2_API returns 400 when UUID contains invalid characters
+- VC_FileInfo-V2_API validates query parameter format
+
+## Edge Test Cases
+- EC_FileInfo-V2_API handles UUID at exact format boundaries
+- EC_FileInfo-V2_API handles concurrent file info requests for same UUID
+- EC_FileInfo-V2_API handles file info retrieval for files with unicode characters in metadata
+- EC_FileInfo-V2_API handles file info for maximum size files
+- EC_FileInfo-V2_API handles file info when file is being accessed by other processes
+- EC_FileInfo-V2_API handles file info for files with special metadata
+- EC_FileInfo-V2_API handles corrupted UUID references
+- EC_FileInfo-V2_API handles file info retrieval during system updates
+- EC_FileInfo-V2_API handles files with maximum allowed name length
+
+## Performance Test Cases
+- PC_FileInfo-V2_API obvious load - clients = 5 ; response time < 0.3s ; error rate = 0%
+- PC_FileInfo-V2_API low load - clients = 100 ; response time < 1s ; error rate = 0%
+- PC_FileInfo-V2_API average load - clients = 500 ; response time < 3s ; error rate = 0%
+- PC_FileInfo-V2_API high load - clients = 1000 ; response time < 5s ; error rate < 5%
+- PC_FileInfo-V2_API extreme load - clients = 2000 ; error rate < 50%
+
+## Security Test Cases
+- SC_FileInfo-V2_API prevents unauthorized access without authentication
+- SC_FileInfo-V2_API does not expose sensitive information in error messages
+- SC_FileInfo-V2_API ensures API responses do not contain unnecessary headers that may expose security risks
+- SC_FileInfo-V2_API prevents API abuse through rate limiting
+- SC_FileInfo-V2_API prevents SQL injection through UUID parameter
+- SC_FileInfo-V2_API properly sanitizes response data to prevent XSS attacks
+- SC_FileInfo-V2_API prevents excessive data exposure in response payload
+- SC_FileInfo-V2_API validates HTTPS enforcement for secure data transmission
+- SC_FileInfo-V2_API prevents information disclosure through error responses
+- SC_FileInfo-V2_API ensures proper CORS configuration
+- SC_FileInfo-V2_API prevents NoSQL injection through UUID parameter
+- SC_FileInfo-V2_API validates UUID format to prevent enumeration attacks
+- SC_FileInfo-V2_API prevents unauthorized access to file info from other users
+- SC_FileInfo-V2_API prevents cross-user file info access through UUID manipulation
+- SC_FileInfo-V2_API ensures secure UUID validation and sanitization
+- SC_FileInfo-V2_API prevents file metadata leakage through error responses
